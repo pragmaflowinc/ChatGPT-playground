@@ -1,0 +1,20 @@
+import { Configuration, OpenAIApi } from "openai";
+
+
+const configuration = new Configuration({
+    organization: process.env.orgId,
+    apiKey: process.env.apiKEy,
+});
+
+body = {
+    "model": "davinci",
+    "prompt": "This is a test",
+    
+}
+
+const openai = new OpenAIApi(configuration);
+const response = await openai.listEngines();
+
+console.log(response);
+export { response }
+
