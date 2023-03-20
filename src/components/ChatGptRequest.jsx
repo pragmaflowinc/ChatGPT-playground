@@ -1,7 +1,7 @@
 const { Configuration, OpenAIApi } = require("openai");
 
 
-export async function ChatGptRequest(props) {
+export default async function ChatGptRequest(props) {
 
   const prompt = console.prompt("Ask ChatGPT")
   // const [status, setStatus] = useState('idle');
@@ -20,7 +20,6 @@ export async function ChatGptRequest(props) {
     temperature: 0,
   });
 
-
-console.alert(response);
+return(response);
 }
 
